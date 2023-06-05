@@ -210,7 +210,7 @@ if &filetype == 'c'
     exec "!gcc % -o %<"
     exec "!time ./%<"
 elseif &filetype == 'cpp'
-    exec "!g++ % -o %<"
+    exec "!g++ % -Wall -std=c++20 -O0 -g -o %<"
     exec "!time ./%<"
 elseif &filetype == 'java'
     exec "!javac %"
